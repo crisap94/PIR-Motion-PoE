@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP RT9013-XXX
+D  500mA LDO regulator, extremely high PSRR and ultra-low dropout.
+K regulator , LDO EN.
+$ENDCMP
+#
+#End Doc Library

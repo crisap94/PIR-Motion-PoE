@@ -1,0 +1,480 @@
+EESchema Schematic File Version 4
+LIBS:PIR Motion-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 8
+Title "Buck converter 4.5v - 60 -> 5v"
+Date "2019-04-14"
+Rev "V1.0"
+Comp ""
+Comment1 "@crisap94"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Switching:MAX17503ATP+T U3
+U 1 1 5CB38F4D
+P 4950 2575
+F 0 "U3" H 5850 2962 60  0000 C CNN
+F 1 "MAX17503ATP+T" H 5850 2856 60  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.5x2.5mm_ThermalVias" H 5850 2815 60  0001 C CNN
+F 3 "" H 4950 2575 60  0000 C CNN
+	1    4950 2575
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L_Small L1
+U 1 1 5CB3907C
+P 3600 2450
+F 0 "L1" V 3785 2450 50  0000 C CNN
+F 1 "3.3uH" V 3694 2450 50  0000 C CNN
+F 2 "" H 3600 2450 50  0001 C CNN
+F 3 "~" H 3600 2450 50  0001 C CNN
+	1    3600 2450
+	0    -1   -1   0   
+$EndComp
+Text HLabel 3275 2875 0    50   Input ~ 0
+EN-UVLO
+Wire Wire Line
+	3275 2350 3275 2450
+Wire Wire Line
+	3275 2450 3500 2450
+Wire Wire Line
+	4825 2450 4825 2575
+Wire Wire Line
+	4825 2775 4950 2775
+Wire Wire Line
+	4950 2675 4825 2675
+Connection ~ 4825 2675
+Wire Wire Line
+	4825 2675 4825 2775
+Wire Wire Line
+	4950 2575 4825 2575
+Connection ~ 4825 2575
+Wire Wire Line
+	4825 2575 4825 2675
+Wire Wire Line
+	3275 2875 3775 2875
+$Comp
+L Device:R_Small R11
+U 1 1 5CB39222
+P 3775 2675
+F 0 "R11" H 3834 2721 50  0000 L CNN
+F 1 "3M3" H 3834 2630 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 3775 2675 50  0001 C CNN
+F 3 "~" H 3775 2675 50  0001 C CNN
+	1    3775 2675
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1_Small C8
+U 1 1 5CB392AE
+P 4100 2600
+F 0 "C8" H 4191 2646 50  0000 L CNN
+F 1 "22uF" H 4191 2555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4100 2600 50  0001 C CNN
+F 3 "~" H 4100 2600 50  0001 C CNN
+	1    4100 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C10
+U 1 1 5CB3932B
+P 4475 2600
+F 0 "C10" H 4567 2646 50  0000 L CNN
+F 1 "2.2uF" H 4567 2555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 4475 2600 50  0001 C CNN
+F 3 "~" H 4475 2600 50  0001 C CNN
+	1    4475 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3775 2775 3775 2875
+Connection ~ 3775 2875
+Wire Wire Line
+	3775 2875 4950 2875
+Wire Wire Line
+	3775 2575 3775 2450
+Connection ~ 3775 2450
+Wire Wire Line
+	3775 2450 4100 2450
+Wire Wire Line
+	4100 2500 4100 2450
+Connection ~ 4100 2450
+Wire Wire Line
+	4100 2450 4475 2450
+Wire Wire Line
+	4475 2500 4475 2450
+Connection ~ 4475 2450
+Wire Wire Line
+	4475 2450 4825 2450
+$Comp
+L power:Earth #PWR010
+U 1 1 5CB39739
+P 4100 2750
+F 0 "#PWR010" H 4100 2500 50  0001 C CNN
+F 1 "Earth" H 4100 2600 50  0001 C CNN
+F 2 "" H 4100 2750 50  0001 C CNN
+F 3 "~" H 4100 2750 50  0001 C CNN
+	1    4100 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR011
+U 1 1 5CB39A34
+P 4475 2750
+F 0 "#PWR011" H 4475 2500 50  0001 C CNN
+F 1 "Earth" H 4475 2600 50  0001 C CNN
+F 2 "" H 4475 2750 50  0001 C CNN
+F 3 "~" H 4475 2750 50  0001 C CNN
+	1    4475 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4475 2700 4475 2750
+Wire Wire Line
+	4100 2700 4100 2750
+$Comp
+L Device:C_Small C9
+U 1 1 5CB39D75
+P 4125 3175
+F 0 "C9" V 4350 3175 50  0000 C CNN
+F 1 "0.018uF" V 4250 3175 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4125 3175 50  0001 C CNN
+F 3 "~" H 4125 3175 50  0001 C CNN
+	1    4125 3175
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4950 3175 4225 3175
+$Comp
+L power:Earth #PWR09
+U 1 1 5CB3A057
+P 3950 3475
+F 0 "#PWR09" H 3950 3225 50  0001 C CNN
+F 1 "Earth" H 3950 3325 50  0001 C CNN
+F 2 "" H 3950 3475 50  0001 C CNN
+F 3 "~" H 3950 3475 50  0001 C CNN
+	1    3950 3475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4025 3175 3950 3175
+Wire Wire Line
+	3950 3175 3950 3475
+Wire Wire Line
+	4950 3075 3950 3075
+Wire Wire Line
+	3950 3075 3950 3175
+Connection ~ 3950 3175
+$Comp
+L Device:C_Small C11
+U 1 1 5CB3A802
+P 4475 3450
+F 0 "C11" H 4600 3450 50  0000 C CNN
+F 1 "1pF" H 4600 3525 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4475 3450 50  0001 C CNN
+F 3 "~" H 4475 3450 50  0001 C CNN
+	1    4475 3450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4950 3275 4475 3275
+Wire Wire Line
+	4475 3275 4475 3350
+Wire Wire Line
+	4950 3375 4650 3375
+Wire Wire Line
+	4650 3375 4650 3675
+Wire Wire Line
+	4650 3675 4475 3675
+Wire Wire Line
+	4475 3675 4475 3550
+$Comp
+L power:Earth #PWR015
+U 1 1 5CB3B1BF
+P 7075 3925
+F 0 "#PWR015" H 7075 3675 50  0001 C CNN
+F 1 "Earth" H 7075 3775 50  0001 C CNN
+F 2 "" H 7075 3925 50  0001 C CNN
+F 3 "~" H 7075 3925 50  0001 C CNN
+	1    7075 3925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 2975 3275 2975
+Text HLabel 3275 2975 0    50   Input ~ 0
+RESET
+$Comp
+L Device:C_Small C12
+U 1 1 5CB3BB86
+P 6875 3725
+F 0 "C12" H 6675 3725 50  0000 L CNN
+F 1 "2.2uF" H 6625 3625 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6875 3725 50  0001 C CNN
+F 3 "~" H 6875 3725 50  0001 C CNN
+	1    6875 3725
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7075 3575 7075 3375
+Connection ~ 7075 3575
+Connection ~ 7075 3175
+Connection ~ 7075 3275
+Wire Wire Line
+	7075 3275 7075 3175
+Connection ~ 7075 3375
+Wire Wire Line
+	7075 3375 7075 3275
+Wire Wire Line
+	7075 3575 7075 3925
+Wire Wire Line
+	6750 3075 7075 3075
+Wire Wire Line
+	6750 3175 7075 3175
+Wire Wire Line
+	6750 3275 7075 3275
+Wire Wire Line
+	6750 3375 7075 3375
+Wire Wire Line
+	6750 3575 7075 3575
+Wire Wire Line
+	6875 3625 6875 3475
+Wire Wire Line
+	6875 3475 6750 3475
+$Comp
+L power:Earth #PWR014
+U 1 1 5CB43287
+P 6875 3925
+F 0 "#PWR014" H 6875 3675 50  0001 C CNN
+F 1 "Earth" H 6875 3775 50  0001 C CNN
+F 2 "" H 6875 3925 50  0001 C CNN
+F 3 "~" H 6875 3925 50  0001 C CNN
+	1    6875 3925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6875 3925 6875 3825
+Wire Wire Line
+	7075 3175 7075 3075
+Wire Wire Line
+	6750 2975 7325 2975
+Wire Wire Line
+	7325 2975 7325 2875
+Wire Wire Line
+	7325 2775 6750 2775
+Wire Wire Line
+	6750 2875 7325 2875
+Connection ~ 7325 2875
+Wire Wire Line
+	7325 2875 7325 2775
+$Comp
+L Device:L_Small L2
+U 1 1 5CB47AB1
+P 7500 2775
+F 0 "L2" V 7685 2775 50  0000 C CNN
+F 1 "15uH" V 7594 2775 50  0000 C CNN
+F 2 "" H 7500 2775 50  0001 C CNN
+F 3 "~" H 7500 2775 50  0001 C CNN
+	1    7500 2775
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7400 2775 7325 2775
+Connection ~ 7325 2775
+$Comp
+L Device:C_Small C13
+U 1 1 5CB48587
+P 7100 2675
+F 0 "C13" V 6871 2675 50  0000 C CNN
+F 1 "2.2uF" V 6962 2675 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7100 2675 50  0001 C CNN
+F 3 "~" H 7100 2675 50  0001 C CNN
+	1    7100 2675
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6750 2675 7000 2675
+Wire Wire Line
+	7200 2675 7325 2675
+Wire Wire Line
+	7325 2675 7325 2775
+$Comp
+L power:Earth #PWR013
+U 1 1 5CB4A50B
+P 6850 2575
+F 0 "#PWR013" H 6850 2325 50  0001 C CNN
+F 1 "Earth" H 6850 2425 50  0001 C CNN
+F 2 "" H 6850 2575 50  0001 C CNN
+F 3 "~" H 6850 2575 50  0001 C CNN
+	1    6850 2575
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6850 2575 6750 2575
+$Comp
+L Device:C_Small C14
+U 1 1 5CB4BF2A
+P 7775 2925
+F 0 "C14" H 7867 2971 50  0000 L CNN
+F 1 "22uF" H 7867 2880 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7775 2925 50  0001 C CNN
+F 3 "~" H 7775 2925 50  0001 C CNN
+	1    7775 2925
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C15
+U 1 1 5CB4BF75
+P 7975 2925
+F 0 "C15" H 8067 2971 50  0000 L CNN
+F 1 "22uF" H 8067 2880 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7975 2925 50  0001 C CNN
+F 3 "~" H 7975 2925 50  0001 C CNN
+	1    7975 2925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7775 2825 7775 2775
+Wire Wire Line
+	7775 2775 7600 2775
+Wire Wire Line
+	7975 2825 7975 2775
+Wire Wire Line
+	7975 2775 7775 2775
+Connection ~ 7775 2775
+$Comp
+L power:Earth #PWR016
+U 1 1 5CB4E263
+P 7775 3100
+F 0 "#PWR016" H 7775 2850 50  0001 C CNN
+F 1 "Earth" H 7775 2950 50  0001 C CNN
+F 2 "" H 7775 3100 50  0001 C CNN
+F 3 "~" H 7775 3100 50  0001 C CNN
+	1    7775 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR017
+U 1 1 5CB4E2FE
+P 7975 3100
+F 0 "#PWR017" H 7975 2850 50  0001 C CNN
+F 1 "Earth" H 7975 2950 50  0001 C CNN
+F 2 "" H 7975 3100 50  0001 C CNN
+F 3 "~" H 7975 3100 50  0001 C CNN
+	1    7975 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7975 3025 7975 3100
+Wire Wire Line
+	7775 3025 7775 3100
+Text Label 4450 3850 2    50   ~ 0
+FEEDBACK
+$Comp
+L Device:R_Small R13
+U 1 1 5CB4FE1F
+P 8325 3075
+F 0 "R13" H 8384 3121 50  0000 L CNN
+F 1 "154K" H 8384 3030 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 8325 3075 50  0001 C CNN
+F 3 "~" H 8325 3075 50  0001 C CNN
+	1    8325 3075
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R14
+U 1 1 5CB4FE7A
+P 8325 3475
+F 0 "R14" H 8384 3521 50  0000 L CNN
+F 1 "34K" H 8384 3430 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 8325 3475 50  0001 C CNN
+F 3 "~" H 8325 3475 50  0001 C CNN
+	1    8325 3475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7975 2775 8325 2775
+Wire Wire Line
+	8325 2775 8325 2975
+Connection ~ 7975 2775
+Wire Wire Line
+	8325 3375 8325 3250
+$Comp
+L power:Earth #PWR018
+U 1 1 5CB535BB
+P 8325 3925
+F 0 "#PWR018" H 8325 3675 50  0001 C CNN
+F 1 "Earth" H 8325 3775 50  0001 C CNN
+F 2 "" H 8325 3925 50  0001 C CNN
+F 3 "~" H 8325 3925 50  0001 C CNN
+	1    8325 3925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8325 3575 8325 3925
+Wire Wire Line
+	8325 3250 8075 3250
+Wire Wire Line
+	8075 3250 8075 3850
+Connection ~ 8325 3250
+Wire Wire Line
+	8325 3250 8325 3175
+Text Label 8075 3850 1    50   ~ 0
+FEEDBACK
+$Comp
+L Device:R_Small R12
+U 1 1 5CB5545B
+P 4850 3650
+F 0 "R12" H 4909 3696 50  0000 L CNN
+F 1 "68K" H 4909 3605 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4850 3650 50  0001 C CNN
+F 3 "~" H 4850 3650 50  0001 C CNN
+	1    4850 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR012
+U 1 1 5CB55538
+P 4850 3800
+F 0 "#PWR012" H 4850 3550 50  0001 C CNN
+F 1 "Earth" H 4850 3650 50  0001 C CNN
+F 2 "" H 4850 3800 50  0001 C CNN
+F 3 "~" H 4850 3800 50  0001 C CNN
+	1    4850 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 3800 4850 3750
+Wire Wire Line
+	4950 3475 4850 3475
+Wire Wire Line
+	4850 3475 4850 3550
+Wire Notes Line
+	2775 2025 2775 4175
+Wire Notes Line
+	2775 4175 8650 4175
+Wire Notes Line
+	8650 4175 8650 2025
+Wire Notes Line
+	8650 2025 2775 2025
+Wire Wire Line
+	8425 2700 8425 2775
+Wire Wire Line
+	8425 2775 8325 2775
+Connection ~ 8325 2775
+Wire Wire Line
+	4475 3675 4475 3850
+Wire Wire Line
+	4475 3850 4025 3850
+Connection ~ 4475 3675
+Text HLabel 3275 2350 1    50   Input ~ 0
+VCC
+Text HLabel 8425 2700 1    50   Input ~ 0
+5V
+Wire Wire Line
+	3700 2450 3775 2450
+$EndSCHEMATC

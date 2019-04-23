@@ -1,0 +1,38 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# H2019FNL
+#
+DEF H2019FNL U 0 40 Y Y 1 L N
+F0 "U" -390 430 50 H V L BNN
+F1 "H2019FNL" -380 -470 50 H V L BNN
+F2 "XCVR_H2019FNL" 0 0 50 H I L BNN
+F3 "SOIC-16 Pulse" 0 0 50 H I L BNN
+F4 "H2019FNL" 0 0 50 H I L BNN
+F5 "VoIP Single w/ shared CMC's. Replacement part for H2019NL." 0 0 50 H I L BNN
+F6 "Pulse Electronics" 0 0 50 H I L BNN
+F7 "None" 0 0 50 H I L BNN
+F8 "Unavailable" 0 0 50 H I L BNN
+DRAW
+P 2 0 0 10 -400 400 -400 -400 N
+P 2 0 0 10 -400 -400 400 -400 N
+P 2 0 0 10 400 -400 400 400 N
+P 2 0 0 10 400 400 -400 400 N
+X TD+ 1 600 300 200 L 40 40 0 0 B 
+X TCT 2 600 200 200 L 40 40 0 0 B 
+X TD- 3 600 100 200 L 40 40 0 0 B 
+X RD+ 6 600 -100 200 L 40 40 0 0 B 
+X RCT 7 600 -200 200 L 40 40 0 0 B 
+X RD- 8 600 -300 200 L 40 40 0 0 B 
+X TX1+ 16 -600 300 200 R 40 40 0 0 B 
+X TXCT 15 -600 200 200 R 40 40 0 0 B 
+X TX1- 14 -600 100 200 R 40 40 0 0 B 
+X RX1+ 11 -600 -100 200 R 40 40 0 0 B 
+X RXCT 10 -600 -200 200 R 40 40 0 0 B 
+X RX- 9 -600 -300 200 R 40 40 0 0 B 
+ENDDRAW
+ENDDEF
+#
+# End Library
